@@ -18,10 +18,23 @@ class Signature extends Component {
     componentDidMount(){
         setInterval(() => {
             this.changeOpacity();
-        }, 120);
+        }, 50);
     }
 
+    componentWillUnmount(){
+        clearInterval();
+        console.log("here")
+        window.location.href = ("http://localhost:3000/main")
+    }
+    switchToMainPage(){
+        setInterval(() => {
+            this.componentWillUnmount()
+        }, 2500);
+    }
+   
     render() { 
+        this.switchToMainPage()
+
         return ( 
         <svg style = {{opacity : this.state.opacity, position: "fixed", top:page_height/4, right:page_width/4 }} className="Signature" version="1.0" xmlns="http://www.w3.org/2000/svg"
         width={page_width/2} height={page_height/2} viewBox="0 0 1008.000000 532.000000"
@@ -82,7 +95,6 @@ class Signature extends Component {
         </svg> );
     }
 
-    function
 }
 
 
