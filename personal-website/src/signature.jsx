@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
+
 const page_height = window.innerHeight;
 const page_width = window.innerWidth;
 
-class Signature extends Component {
-componentDidMount() {
-        console.log('I was triggered during componentDidMount')
-}
-
 //TODO: Handle Resize
-    render() { 
+class Signature extends Component {
+    state = {
+        opacity : 1,
+        opacity_offset : -0.1
+    }
 
+    changeOpacity = () =>{
+        if(this.state.opacity <= 0) this.state.opacity_offset = 0.1
+        if(this.state.opacity >=1) this.state.opacity_offset = -0.1
+        this.setState({opacity : this.state.opacity += this.state.opacity_offset})
+    }
+    componentDidMount(){
+        setInterval(() => {
+            this.changeOpacity();
+        }, 120);
+    }
+
+    render() { 
         return ( 
-        <svg style = {this.styles} className="Signature" version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width={page_width} height={page_height} viewBox="0 0 1008.000000 532.000000"
+        <svg style = {{opacity : this.state.opacity, position: "fixed", top:page_height/4, right:page_width/4 }} className="Signature" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        width={page_width/2} height={page_height/2} viewBox="0 0 1008.000000 532.000000"
         preserveAspectRatio="xMidYMid meet">
         
         <g transform="translate(0.000000,532.000000) scale(0.100000,-0.100000)"
@@ -69,6 +81,9 @@ componentDidMount() {
         </g>
         </svg> );
     }
+
+    function
 }
+
 
 export default Signature;
