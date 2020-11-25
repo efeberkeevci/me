@@ -1,0 +1,9 @@
+1) Make svg of the signature
+2) Make the animation with that
+3) Decide on what to display
+ - Work Experience
+ - School work, what I have done at each course
+ - What are my current and future interests
+ - My philosophy
+ - What am I as a person
+ 
