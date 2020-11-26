@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/efeevci.github.io/static/css/main.1757fde7.chunk.css",
+    "main.js": "/efeevci.github.io/static/js/main.f71ea2bc.chunk.js",
+    "main.js.map": "/efeevci.github.io/static/js/main.f71ea2bc.chunk.js.map",
+    "runtime-main.js": "/efeevci.github.io/static/js/runtime-main.81687572.js",
+    "runtime-main.js.map": "/efeevci.github.io/static/js/runtime-main.81687572.js.map",
+    "static/css/2.43b2b750.chunk.css": "/efeevci.github.io/static/css/2.43b2b750.chunk.css",
+    "static/js/2.f60fd09b.chunk.js": "/efeevci.github.io/static/js/2.f60fd09b.chunk.js",
+    "static/js/2.f60fd09b.chunk.js.map": "/efeevci.github.io/static/js/2.f60fd09b.chunk.js.map",
+    "index.html": "/efeevci.github.io/index.html",
+    "static/css/2.43b2b750.chunk.css.map": "/efeevci.github.io/static/css/2.43b2b750.chunk.css.map",
+    "static/css/main.1757fde7.chunk.css.map": "/efeevci.github.io/static/css/main.1757fde7.chunk.css.map",
+    "static/js/2.f60fd09b.chunk.js.LICENSE.txt": "/efeevci.github.io/static/js/2.f60fd09b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81687572.js",
+    "static/css/2.43b2b750.chunk.css",
+    "static/js/2.f60fd09b.chunk.js",
+    "static/css/main.1757fde7.chunk.css",
+    "static/js/main.f71ea2bc.chunk.js"
+  ]
+}
