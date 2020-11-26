@@ -18,12 +18,11 @@ class Signature extends Component {
     componentDidMount(){
         setInterval(() => {
             this.changeOpacity();
-        }, 50);
+        }, 75);
     }
 
     componentWillUnmount(){
         clearInterval();
-        console.log("here")
         window.location.href = ("http://localhost:3000/main")
     }
     switchToMainPage(){
