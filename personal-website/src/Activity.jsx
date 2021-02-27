@@ -149,7 +149,7 @@ class Activity extends Component {
         preserveAspectRatio="xMidYMid meet">
         
         <g transform="translate(0.000000,532.000000) scale(0.100000,-0.100000)"
-        fill="#ffffff" stroke="none">
+        fill="#ffffff" stroke="10">
         <path d="M2627 3471 c-449 -82 -820 -151 -824 -155 -4 -3 -2 -11 5 -18 8 -8
         219 20 829 111 450 67 828 126 841 131 28 12 30 55 3 70 -11 5 -23 10 -28 9
         -4 0 -376 -67 -826 -148z"/>
