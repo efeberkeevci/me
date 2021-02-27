@@ -7,11 +7,15 @@ import MainPage from "./mainpage";
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 const routing = (
-  <Router>
-    <div>
-      <Route exact path ="/" component = {Signature}/>
-      <Route exact path ="/main" component = {MainPage} />
-    </div>
-  </Router>
+    /*
+    <Router>
+      <div>
+        <Route exact path ="/" component = {Signature}/>
+        <Route exact path ="/main" component = {MainPage} />
+      </div>
+    </Router>
+    */
+    <
+    Signature > < /Signature>
 )
-ReactDOM.render(routing,document.getElementById("root"));
+ReactDOM.render(routing, document.getElementById("root"));
