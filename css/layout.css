@@ -26,6 +26,7 @@ html, body {
    background: #1d1e1e; 
    height: 100%;
    width: 100%;
+   scroll-behavior: smooth;
 
 }
 #root{
