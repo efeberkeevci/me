@@ -46,11 +46,7 @@ class App extends Component {
 
   render() {
     return (
-      <div id="app_container">
         <Header data= {this.state.resumeData.main}> </Header>
-        <Calendar></Calendar>
-        <Footer></Footer>
-      </div>
     );
   }
 }

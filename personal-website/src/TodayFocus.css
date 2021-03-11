@@ -1,0 +1,41 @@
+.todayfocus_container{
+    width: 20%;
+    height: 40%;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    float: right;
+    margin-right: 5%;
+    border-radius: 10px;
+
+}
+
+.title{
+    text-align: left;
+    font-size: x-large;
+    padding-left: 10px;
+    color: white;
+
+}
+.task{
+    text-align: left;
+    font-size: medium;
+    padding-left: 10px;
+    color: white;
+}
+.task--primary {
+    width: 75%;
+    height: 40px;
+    background: #4786ff;
+    font-size: large;
+    font-stretch:wider ;
+    border: 0;
+    border-radius: 15px;
+    grid-column: auto;
+    grid-row: 4;
+    align-content: center;
+    color: #fff;
+    padding-left: 10px;
+    margin-top: 5%;
+    text-align: center;
+  }

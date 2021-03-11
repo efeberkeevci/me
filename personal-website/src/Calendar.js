@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Calendar.css"
+import TodayFocus from "./TodayFocus"
 
 
 let names = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -33,22 +34,37 @@ class Calendar extends Component {
         }
 
         for(let i = 1; i<=num_days_of_month; i++){
-            days.push(<div class="day">{i}</div>);
+            if(i == 11){
+                days.push(
+                    <div class="day">
+                        {i}
+                                
+                    </div>
+                )
+            }
+            else{
+                days.push(<div class="day">{i}</div>);
+            }
         }
 
         return ( 
-            
-            <div class="calendar-container">
-            <div class="calendar-header">
-                <h2>{monthNames[this.state.date.getMonth()]}</h2>
-                <h1>{this.state.date.getFullYear()}</h1>
-            </div>
-            <div class="calendar"><span class="day-name">Mon</span><span class="day-name">Tue</span><span class="day-name">Wed</span><span class="day-name">Thu</span><span class="day-name">Fri</span><span class="day-name">Sat</span><span class="day-name">Sun</span>
-                
-                {missing_days_beginning_of_month}
-                {days}
-                {missing_days_end_of_month}
-            </div>
+            <div class="dailywork_container">
+                 <a name="calendar"></a>
+
+                <h1 className="calendar-title"></h1>
+
+                <TodayFocus></TodayFocus>
+                <div class="calendar-container">
+                <div class="calendar-header">
+                    <h2>{monthNames[this.state.date.getMonth()]} {this.state.date.getFullYear()}</h2>
+                </div>
+                <div class="calendar"><span class="day-name">Mon</span><span class="day-name">Tue</span><span class="day-name">Wed</span><span class="day-name">Thu</span><span class="day-name">Fri</span><span class="day-name">Sat</span><span class="day-name">Sun</span>
+                    
+                    {missing_days_beginning_of_month}
+                    {days}
+                    {missing_days_end_of_month}
+                </div>
+                </div>
             </div>
          );
     }

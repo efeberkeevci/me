@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Signature from "../signature"
+import Calendar from "../Calendar"
 import { unmountComponentAtNode, render } from "react-dom";
+import Footer from './Footer';
 class Header extends Component {
    timeout = 0;
    state = {
@@ -33,18 +35,19 @@ class Header extends Component {
       })
     }
     
-    {/*
+    
    
     if(this.state.is_welcome_page_visible){
       this.switchToMainPage();
        return <Signature></Signature>
     }
-        */}
 
     
     if(this.state.is_mainpage_visible){
       this.mainpage_transition();
       return (
+         <div id="app_container">
+
          <header id="home" style = {{opacity : this.state.opacity}}>
          
    
@@ -72,18 +75,19 @@ class Header extends Component {
                <ul className="social">
                   {networks}
                </ul>
-               <div className="today_focus">
-                  <h3>Today I am working on</h3>
-                  Distributed Hash Table, Personal Website Development
-               </div>
             </div>
          </div>  
         
-         <p className="scrolldown">
-            <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-         </p>
+        
       
+         <p className="scrolldown">
+            <a className="smoothscroll" href="#calendar"><i className="icon-down-circle"></i></a>
+         </p>
+
       </header>
+      <Calendar></Calendar>
+      <Footer></Footer>
+      </div>
        );
      }
    }
