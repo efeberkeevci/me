@@ -36,6 +36,9 @@ html, body {
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
 
+#app_container{
+   height: 100%;
+}
 header {
    position: relative;
    width: 100%;
@@ -825,7 +828,7 @@ call-to-action .button {
 	padding-right: 10px;
 	font-size: 72px;
    line-height: 72px;
-   text-align: left;
+   text-align: center;
    float: left;
    color: #ebeeee;
 }
@@ -1016,3 +1019,8 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #0F9095; }
+
+.today_focus{
+   position: relative;
+   top: 50%;
+}
