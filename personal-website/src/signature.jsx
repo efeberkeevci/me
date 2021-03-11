@@ -5,34 +5,36 @@ const page_width = window.innerWidth;
 
 //TODO: Handle Resize
 class Signature extends Component {
+    timeout = 0;
     state = {
-        opacity : 1,
-        opacity_offset : -0.1
+        opacity : 0,
+        opacity_offset : 0.01,
+        opacity_cycle_count: 0
     }
 
     changeOpacity = () =>{
-        if(this.state.opacity <= 0) this.state.opacity_offset = 0.1
-        if(this.state.opacity >=1) this.state.opacity_offset = -0.1
+        if(this.state.opacity <= 0) {
+            this.state.opacity_offset = 0.01;
+            this.setState({opacity_cycle_count: this.state.opacity_cycle_count+=1})
+
+        }
+        if(this.state.opacity >=1) this.state.opacity_offset = -0.01;
         this.setState({opacity : this.state.opacity += this.state.opacity_offset})
     }
     componentDidMount(){
-        setInterval(() => {
-            this.changeOpacity();
-        }, 75);
+        this.timeout = setInterval(() => {
+            console.log(this.state.opacity)
+            if(this.state.opacity_cycle_count<3){
+                this.changeOpacity();
+            }
+            else{
+                clearInterval(this.timeout);
+                this.setState({opacity : 0})
+            }
+        }, 7);
     }
 
-    componentWillUnmount(){
-        clearInterval();
-        //window.location.href = ("http://localhost:3000/main")
-    }
-    switchToMainPage(){
-        setInterval(() => {
-            this.componentWillUnmount()
-        }, 2500);
-    }
-   
     render() { 
-        this.switchToMainPage()
 
         return ( 
         <svg style = {{opacity : this.state.opacity, position: "fixed", top:page_height/4, right:page_width/4 }} className="Signature" version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +42,7 @@ class Signature extends Component {
         preserveAspectRatio="xMidYMid meet">
         
         <g transform="translate(0.000000,532.000000) scale(0.100000,-0.100000)"
-        fill="#000000" stroke="none">
+        fill="#ffffff" stroke="none">
         <path d="M2627 3471 c-449 -82 -820 -151 -824 -155 -4 -3 -2 -11 5 -18 8 -8
         219 20 829 111 450 67 828 126 841 131 28 12 30 55 3 70 -11 5 -23 10 -28 9
         -4 0 -376 -67 -826 -148z"/>
