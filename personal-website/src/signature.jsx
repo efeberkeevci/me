@@ -23,7 +23,6 @@ class Signature extends Component {
     }
     componentDidMount(){
         this.timeout = setInterval(() => {
-            console.log(this.state.opacity)
             if(this.state.opacity_cycle_count<3){
                 this.changeOpacity();
             }

@@ -11,7 +11,10 @@ import Portfolio from './Components/Portfolio';
 import MainPage from "./mainpage"
 import Calendar from "./Calendar"
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom' 
+import ReactGA from 'react-ga';
+
 class App extends Component {
+
 
   constructor(props){
     super(props);
@@ -42,6 +45,8 @@ class App extends Component {
 
   componentDidMount(){
     this.getResumeData();
+    ReactGA.initialize('UA-191999663-1');
+    ReactGA.pageview("/homepage");
   }
 
   render() {
