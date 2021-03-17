@@ -1,4 +1,3 @@
-
 class Activity {
     constructor(){
         this.date = undefined;
@@ -10,5 +9,5 @@ class Activity {
     }
 }
 
+
 export default Activity;
-        

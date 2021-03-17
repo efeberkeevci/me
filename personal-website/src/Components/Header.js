@@ -37,11 +37,13 @@ class Header extends Component {
     
     
 
+   {/*
    
     if(this.state.is_welcome_page_visible){
       this.switchToMainPage();
        return <Signature></Signature>
     }
+   */}
 
 
     
