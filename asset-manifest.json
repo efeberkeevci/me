@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b1e6093.chunk.css",
-    "main.js": "/static/js/main.2cd6a39f.chunk.js",
-    "main.js.map": "/static/js/main.2cd6a39f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b988ef37.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b988ef37.js.map",
-    "static/js/2.d89c332e.chunk.js": "/static/js/2.d89c332e.chunk.js",
-    "static/js/2.d89c332e.chunk.js.map": "/static/js/2.d89c332e.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.4b1e6093.chunk.css.map": "/static/css/main.4b1e6093.chunk.css.map",
-    "static/js/2.d89c332e.chunk.js.LICENSE.txt": "/static/js/2.d89c332e.chunk.js.LICENSE.txt"
+    "main.css": "/efeevci.com/static/css/main.4b1e6093.chunk.css",
+    "main.js": "/efeevci.com/static/js/main.2cd6a39f.chunk.js",
+    "main.js.map": "/efeevci.com/static/js/main.2cd6a39f.chunk.js.map",
+    "runtime-main.js": "/efeevci.com/static/js/runtime-main.6367c3e1.js",
+    "runtime-main.js.map": "/efeevci.com/static/js/runtime-main.6367c3e1.js.map",
+    "static/js/2.d89c332e.chunk.js": "/efeevci.com/static/js/2.d89c332e.chunk.js",
+    "static/js/2.d89c332e.chunk.js.map": "/efeevci.com/static/js/2.d89c332e.chunk.js.map",
+    "index.html": "/efeevci.com/index.html",
+    "static/css/main.4b1e6093.chunk.css.map": "/efeevci.com/static/css/main.4b1e6093.chunk.css.map",
+    "static/js/2.d89c332e.chunk.js.LICENSE.txt": "/efeevci.com/static/js/2.d89c332e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b988ef37.js",
+    "static/js/runtime-main.6367c3e1.js",
     "static/js/2.d89c332e.chunk.js",
     "static/css/main.4b1e6093.chunk.css",
     "static/js/main.2cd6a39f.chunk.js"
