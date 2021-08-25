@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../Styles/Resume.css";
 
 class Resume extends Component {
   render() {
@@ -52,7 +53,7 @@ class Resume extends Component {
     </div>
 
 
-
+      {/* 
       <div className="row skill">
 
          <div className="three columns header-col">
@@ -70,7 +71,9 @@ class Resume extends Component {
 					</ul>
 				</div>
 			</div>
+     
       </div>
+       */}
    </section>
     );
   }

@@ -1,0 +1,38 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+}
+.pageCalendar {
+  background-color:white;
+  
+
+}
+.calendarWrapper{
+  background-color:white;
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  display: inline-block;
+  vertical-align:top;}
+/*
+
+.modeButton{
+  color: white;
+}
+.calendarHeaderButtons{
+  color: white;
+}
+
+h1{
+  color:white;
+}
+
+.calendarDayOfWeek{
+  color: white;
+}
+.dayCell{
+  color:white;
+}
+*/
+.yearlyMonth{
+  background-color: white;
+}

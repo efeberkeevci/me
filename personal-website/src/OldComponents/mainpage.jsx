@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Activity from "./Activity"
-import Signature from "./signature"
+import Signature from "../signature"
 class MainPage extends Component {
     state = {  }
     render() { 

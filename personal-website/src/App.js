@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import './App.css';
+import './Styles/App.css';
 import Header from './Components/Header.js';
+import About from "./Components/About.js";
+import Calendar2 from './Components/Calendar2';
+import TodayFocus from "./TodayFocus";
+import Portfolio from './Components/Portfolio';
+import Contact from "./Components/Contact"
+import Footer from './Components/Footer';
+import Resume from "./Components/Resume"
 
 //import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import ReactGA from 'react-ga';
@@ -41,10 +48,25 @@ class App extends Component {
     }
 
     render() {
-        return ( <
-            Header data = { this.state.resumeData.main }
-            />);
-        }
+        return ( 
+            < div >
+                <Header data = { this.state.resumeData.main }/>  
+                <div className="smoothscroll" id = "things_done_container">
+                    <h1 id="dividor_h1">What do i work on?</h1>
+                    <div id = "calendar_container">
+                        <Calendar2 /> 
+                    </div>
+                    <div id = "todayfocus_container">
+                    <TodayFocus></TodayFocus>
+                    </div>
+                </div>
+                {/*
+                <div className="smoothscroll" id = "resume_container">
+                    <Resume data = {this.state.resumeData.resume}></Resume>      
+                </div>
+                */}
+                
+            </div> 
+        );
     }
-
-    export default App;
+}export default App;

@@ -1,26 +1,26 @@
 .todayfocus_container{
-    width: 20%;
-    height: 40%;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     margin: auto;
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    float: right;
     margin-right: 5%;
     border-radius: 10px;
-
 }
 
 .title{
     text-align: left;
-    font-size: x-large;
-    padding-left: 10px;
+    font-size: xx-large;
     color: white;
+    padding-left: 50%;
+    padding-right: 50%;
 
 }
 .task{
-    text-align: left;
-    font-size: medium;
-    padding-left: 10px;
+    text-align: center;
+    font-size: large;
+   
     color: white;
 }
 .task--primary {

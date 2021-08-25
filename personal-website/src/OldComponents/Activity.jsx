@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as THREE from "three";
-import "./Activity.css"
+import "./Styles/Activity.css"
 
 const page_height = window.innerHeight;
 const page_width = window.innerWidth;
