@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { unmountComponentAtNode, render } from "react-dom";
-import Footer from './Footer';
+var image_src  =  "images/avatar.png";
 class Header extends Component {
 
     render() {
@@ -16,6 +15,7 @@ class Header extends Component {
         //Signature transition
         //this.mainpage_transition();
         return ( 
+            
         <div id = "app_container" >
                 { /* <header id="home" style = {{opacity : this.state.opacity}}>  */ } 
                 <header id = "home" >
@@ -26,30 +26,33 @@ class Header extends Component {
                         href = "#home"
                         //TODO: Add real links to the navigation buttons
                         title = "Hide navigation" > Hide navigation </a> {
+                            
                             <ul id="nav" className="nav">
+                             {/*   
                                 <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
+                                
                                 <li><a className="smoothscroll" href="#things_done_container">My Focus</a></li>  
-                                {/* 
+                             
                                 <li><a className="smoothscroll" href="#resume_container">Resume</a></li>
                                 <li><a className="smoothscroll" href="#blog_container">Blog</a></li>
                                 */}
                             </ul>                
                         }
                     </nav>
-
+                    
                     <div className = "row banner" >
+                    <img id = "avatar" src ={image_src}/>
                     <div className = "banner-text" >
+                    
                     <h1 className = "responsive-headline" > I 'm {name}.</h1> <h3 > I 'm a {city} based <span>{occupation}</span> {description}</h3> 
+                    
                     <hr/>
+                   
                     <ul className = "social" > { networks } </ul> </div > </div>  
-                    {
-                    /*
-                        <p className="scrolldown">
-                        <a className="smoothscroll" href="#calendar"><i className="icon-down-circle"></i></a>
-                        </p>
-                    */
-                    }
+                    
+                    
             </header>
+           
         </div>
     );
 

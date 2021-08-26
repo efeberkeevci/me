@@ -16,9 +16,8 @@ class TodayFocus extends Component {
     render() {
         return ( 
             <div className = "todayfocus_container" >
-                <h1 className = "title" > Today < /h1>  
-                < h5 className = "task" > Personal Website Maintenance < /h5>
-
+                <h1 className = "title" > Today </h1>  
+                < h5 className = "task" > Personal Website Maintenance </h5>
              </div >
         );
     }

@@ -38,6 +38,9 @@
     transform: rotate(360deg);
   }
 }
+Header{
+  height: 100vh;
+}
 #dividor_h1{
   text-align: center;
   color: white;
@@ -62,4 +65,8 @@
 
 #things_done_container{
   height: 100%;
+}
+
+#avatar{
+  z-index: 2;
 }
