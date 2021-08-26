@@ -19,6 +19,8 @@ class Header extends Component {
         <div id = "app_container" >
                 { /* <header id="home" style = {{opacity : this.state.opacity}}>  */ } 
                 <header id = "home" >
+                    {/*
+                    
                     <nav id = "nav-wrap" >
                         <a className = "mobile-btn"
                         href = "#nav-wrap"
@@ -28,23 +30,23 @@ class Header extends Component {
                         title = "Hide navigation" > Hide navigation </a> {
                             
                             <ul id="nav" className="nav">
-                             {/*   
+                              
                                 <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
                                 
                                 <li><a className="smoothscroll" href="#things_done_container">My Focus</a></li>  
                              
                                 <li><a className="smoothscroll" href="#resume_container">Resume</a></li>
                                 <li><a className="smoothscroll" href="#blog_container">Blog</a></li>
-                                */}
+                                
                             </ul>                
                         }
                     </nav>
-                    
+                    */}
                     <div className = "row banner" >
                     <img id = "avatar" src ={image_src}/>
                     <div className = "banner-text" >
                     
-                    <h1 className = "responsive-headline" > I 'm {name}.</h1> <h3 > I 'm a {city} based <span>{occupation}</span> {description}</h3> 
+                    <h1 className = "responsive-headline" > I'm {name}.</h1> <h3 > I'm a {city} based <span>{occupation}</span> {description}</h3> 
                     
                     <hr/>
                    

@@ -51,7 +51,7 @@ class App extends Component {
         return ( 
             < div >
                 <Header data = { this.state.resumeData.main }/>  
-{/*
+ {/* 
                 <div className="smoothscroll" id = "things_done_container">
                     <h1 id="dividor_h1">What do i work on?</h1>
                     <div id = "calendar_container">
@@ -61,7 +61,7 @@ class App extends Component {
                     <TodayFocus></TodayFocus>
                     </div>
                 </div>
-                
+              
                 <div className="smoothscroll" id = "resume_container">
                     <Resume data = {this.state.resumeData.resume}></Resume>      
                 </div>
