@@ -16,7 +16,7 @@ class Calendar2 extends React.Component {
   }
 
   componentDidMount() {
-    //getDays().then((res) =>createEvents(res)).then((my_events) => console.log(my_events));
+    getDays().then((res) => console.log(res));
   }
 
   render() {

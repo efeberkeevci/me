@@ -19,7 +19,7 @@ class Header extends Component {
         <div id = "app_container" >
                 { /* <header id="home" style = {{opacity : this.state.opacity}}>  */ } 
                 <header id = "home" >
-                    {/*
+                
                     
                     <nav id = "nav-wrap" >
                         <a className = "mobile-btn"
@@ -34,14 +34,14 @@ class Header extends Component {
                                 <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
                                 
                                 <li><a className="smoothscroll" href="#things_done_container">My Focus</a></li>  
-                             
+                              {/*   
                                 <li><a className="smoothscroll" href="#resume_container">Resume</a></li>
                                 <li><a className="smoothscroll" href="#blog_container">Blog</a></li>
-                                
+                                */}
                             </ul>                
                         }
                     </nav>
-                    */}
+                   
                     <div className = "row banner" >
                     <img id = "avatar" src ={image_src}/>
                     <div className = "banner-text" >

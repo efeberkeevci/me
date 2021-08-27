@@ -1,0 +1,20 @@
+.markdown_content{
+    border-color: white;
+    border-radius: 20px;
+    border: 1px;
+    padding: 5%;
+    border-style: solid;
+    text-align: left;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    max-width: 50%;
+    height: 50%;
+    scroll-behavior: smooth;
+    color: white;
+    
+}
+
+h1, h2, h3{
+    color: white;
+}
