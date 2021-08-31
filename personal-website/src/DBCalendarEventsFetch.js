@@ -1,18 +1,30 @@
 import Activity from "./OldComponents/Activity";
 const BACKEND_ROOT_URL = "https://efeevci-person-site-backend.herokuapp.com";
-let activities = [];
-let events = [];
 
 /*
 Gets days of the current month
 Calls to get the activities for that day
 */
-async function getDays(){
+async function createThisMonthEvents(){
     var date = new Date();
-    var month = date.getMonth() + 1;
+    var month = date.getMonth() + 1; // need to make it reflective for current month window
+    var activities = [];
+    var events = [];
     
-    fetch(BACKEND_ROOT_URL + "/days/" + month).then(res => res.json())
-      .then(
+    const days = await fetch(BACKEND_ROOT_URL + "/days/" + month).then(res => res.json());
+    
+    Promise.all(days.map(async (day) => {
+        const cur_activities = await getActivities(day.day_id,day.date);
+        cur_activities.forEach((activity) =>{
+            const cur_event = createEvent(activity);
+            events.push(cur_event);
+        }) 
+    }));
+    
+    return events;
+}
+/*
+.then(
           (result) => {
               result.forEach(day => {
                  getActivity(day.day_id, day.date);
@@ -21,31 +33,26 @@ async function getDays(){
           (error) => {
               console.log("Error in getting days: ", error)
           }
-    ).then(() => {createEvents(activities)});
-
-}
+           ).then(() => {createEvents(activities)});
+*/
 /*
 Gets the activities for the specified day with given day_id
 */
-async function getActivity(day_id, date) {
-    fetch(BACKEND_ROOT_URL + "/activities/" + day_id).then(res => res.json())
-      .then(
-          (result) => {
-              result.forEach(element => {
-                  let activity = new Activity();
-                  activity.date = date;
-                  activity.day_id = day_id;
-                  activity.activity_id = element.activity_id;
-                  activity.title = element.title;
-                  activity.description = element.description;
-                  //getTag(activity);
-                  activities.push(activity);
-              });
-          },
-          (error) => {
-              console.log("Error in getting activity: ", error)
-          }
-      ).then(() => {return});
+async function getActivities(day_id, date) {
+    
+    let current_activities = [];
+    const result = await fetch(BACKEND_ROOT_URL + "/activities/" + day_id).then(res => res.json());
+    result.forEach((element) => {   
+        let activity = new Activity();
+        activity.date = date;
+        activity.day_id = day_id;
+        activity.activity_id = element.activity_id;
+        activity.title = element.title;
+        activity.description = element.description;
+        //getTag(activity);
+        current_activities.push(activity);
+    });
+    return current_activities;      
 }
 /*
 async function getTag(activity) {
@@ -63,20 +70,17 @@ async function getTag(activity) {
 }
 */
 
-function createEvents(activities){
-  let id = 0;
-  if(activities){
-    for(let activity of activities){
-        var title = activity.title;
-        var start_date = activity.date;
-        events.push({
-          id : {id},
-          color : '#fd3153',
-          from : {start_date},
-          to: '2020-08-27T18:00:00+00:00',
-          title:{title}
-        });
-      }
-  }
+function createEvent(activity, event_color = '#fd3153'){
+    let end_date = new Date(activity.date);
+    end_date.setDate(end_date.getDate()+1);
+
+    const event = {
+        id : activity.activity_id,
+        color : event_color,
+        from : activity.date,
+        to: end_date,
+        title: activity.title
+    };
+    return event;
 }
-export{getDays,createEvents};
+export{createThisMonthEvents};

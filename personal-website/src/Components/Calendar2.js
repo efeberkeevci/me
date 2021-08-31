@@ -1,22 +1,21 @@
 import React from 'react';
 import Calendar from 'react-awesome-calendar';
 import styles from '../Styles/Calendar2.css';
-import {getDays,createEvents} from "../DBCalendarEventsFetch";
-
-
-let events = [];
+import {createThisMonthEvents} from "../DBCalendarEventsFetch";
 
 class Calendar2 extends React.Component {
   constructor(props) {
     super(props);
-    this.calendar = React.createRef();
     this.state = {
-      e : []
+      this_month_events : []
     }
+    this.calendar = React.createRef();
   }
 
-  componentDidMount() {
-    getDays().then((res) => console.log(res));
+  async componentDidMount() {
+    const res = await createThisMonthEvents();
+    this.setState({this_month_events : res});
+
   }
 
   render() {
@@ -27,7 +26,7 @@ class Calendar2 extends React.Component {
           onClickEvent={(event) => console.log('this is an event', event)}
           onChange={(dates) => console.log(dates)}
           onClickTimeLine={(date) => console.log(date)}
-          events={this.state.e}
+          events={this.state.this_month_events}
         />
       </div>
     );

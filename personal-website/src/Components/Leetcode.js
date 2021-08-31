@@ -10,7 +10,6 @@ import "../Styles/Leetcode.css"
 class Markdown extends Component {
   constructor(props) {
     super(props)
-    console.log(props.filepath);
     this.state = { 
         filepath : props.filepath,
         markdown: null 
