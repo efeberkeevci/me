@@ -5,7 +5,6 @@ import Header from './Components/Header.js';
 import Leetcode from './Components/Leetcode';
 import About from "./Components/About.js";
 import Calendar2 from './Components/Calendar2';
-import TodayFocus from "./TodayFocus";
 import Portfolio from './Components/Portfolio';
 import Contact from "./Components/Contact"
 import Footer from './Components/Footer';
@@ -56,17 +55,9 @@ class App extends Component {
             < div >
                 <Header data = { this.state.resumeData.main }/>  
                 {/*<Leetcode filepath = "./146.LRUCache.md"></Leetcode> */}
-
+                <Calendar2></Calendar2>
            
-                <div className="smoothscroll" id = "things_done_container">
-                    <h1 id="dividor_h1">What do i work on?</h1>
-                    <div id = "calendar_container">
-                        <Calendar2 /> 
-                    </div>
-                    <div id = "todayfocus_container">
-                    <TodayFocus></TodayFocus>
-                    </div>
-                </div>
+                
             {/*   
                 <div className="smoothscroll" id = "resume_container">
                     <Resume data = {this.state.resumeData.resume}></Resume>      

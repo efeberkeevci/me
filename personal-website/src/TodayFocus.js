@@ -1,23 +1,35 @@
 import React, { Component } from 'react';
 import "./Styles/TodayFocus.css";
-let activites_dom = [];
-let activities = [];
 class TodayFocus extends Component {
-    /*
-    componentWillMount(){
-        activities = this.props.activities;
-        
-        for (let activity of activities) {
-            activites_dom.push( < h5 className = "task" > {activity.title} < /h5>);
+    constructor(props){
+        super(props);
+        this.state = {
+            events : props.events,
+            events_dom : []
         }
     }
-    */
+    
+    componentWillReceiveProps(nextProps) {
+        this.setState({ events: nextProps.events });
+        console.log(this.state.events);
+        let tmp = [];
+        for (let event of this.state.events) {
+            tmp.push( <h5 className = "task" > {event.title} </h5>);
+        }
+        console.log(tmp);
+        this.setState({events_dom: tmp });
+      }
+    componentDidMount(){
+        let events = this.props.events; // change this
+        
+    }
+    
    
     render() {
         return ( 
             <div className = "todayfocus_container" >
                 <h1 className = "title" > Today </h1>  
-                < h5 className = "task" > Personal Website Maintenance </h5>
+                {this.state.events_dom}
              </div >
         );
     }

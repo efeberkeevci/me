@@ -1,13 +1,13 @@
 import Activity from "./OldComponents/Activity";
 const BACKEND_ROOT_URL = "https://efeevci-person-site-backend.herokuapp.com";
-
+var date = new Date();
 /*
 Gets days of the current month
 Calls to get the activities for that day
 */
-async function createThisMonthEvents(){
-    var date = new Date();
-    var month = date.getMonth() + 1; // need to make it reflective for current month window
+async function createThisMonthEvents(month = date.getMonth()){
+    
+    var month = month + 1; // need to make it reflective for current month window
     var activities = [];
     var events = [];
     
