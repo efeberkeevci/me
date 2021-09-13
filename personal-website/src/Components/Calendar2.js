@@ -43,7 +43,7 @@ class Calendar2 extends React.Component {
 
   render() {
     return (<div id = "things_done_container">
-    <h1 id="dividor_h1">What do i work on?</h1>
+    <h2 id="dividor_h1">My Focus</h2>
     <div id = "calendar_container">
     <div className={styles.pageCalendar}>
         <Calendar

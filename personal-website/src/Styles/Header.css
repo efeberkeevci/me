@@ -1,0 +1,6 @@
+#source_code_info {
+    text-align: center;
+}
+#source_code_info > h6 {
+    display: inline-block;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../Styles/Header.css"
 import Emoji from '../OldComponents/Emoji';
 var image_src  =  "images/avatar.png";
 class Header extends Component {
@@ -52,13 +53,21 @@ class Header extends Component {
                     </nav>
                    
                     <div className = "row banner" >
-                    <img id = "avatar" src ={image_src}/>
-                    <div className = "banner-text" >
+                        <img id = "avatar" src ={image_src}/>
+                        <div className = "banner-text" >
+                        
+                            <h1 className = "responsive-headline" > I'm {name}.</h1> <h3 > I'm a {city} based <span>{occupation}</span> {description}</h3> 
+                            <hr/>
+                            <ul className = "social" > { networks } </ul> 
+                            
+                        </div >
+                            <div id ="source_code_info">
+                                <h6 style = {{color: "white"}}> source code available      </h6> 
+                                <a href="https://github.com/efeberkeevci/me/">    @GitHub</a>
+                            </div>
+                    </div>  
+
                     
-                    <h1 className = "responsive-headline" > I'm {name}.</h1> <h3 > I'm a {city} based <span>{occupation}</span> {description}</h3> 
-                    
-                    <hr/>
-                    <ul className = "social" > { networks } </ul> </div > </div>  
                     
                     
             </header>
