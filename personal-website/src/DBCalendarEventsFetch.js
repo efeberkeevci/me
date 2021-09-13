@@ -23,18 +23,7 @@ async function createThisMonthEvents(month = date.getMonth()){
     
     return events;
 }
-/*
-.then(
-          (result) => {
-              result.forEach(day => {
-                 getActivity(day.day_id, day.date);
-              })
-          },
-          (error) => {
-              console.log("Error in getting days: ", error)
-          }
-           ).then(() => {createEvents(activities)});
-*/
+
 /*
 Gets the activities for the specified day with given day_id
 */

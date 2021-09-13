@@ -8,7 +8,10 @@ import Calendar2 from './Components/Calendar2';
 import Portfolio from './Components/Portfolio';
 import Contact from "./Components/Contact"
 import Footer from './Components/Footer';
-import Resume from "./Components/Resume"
+import Resume from "./Components/Resume";
+import Projects from "./Components/Projects";
+import OutsideOfWork from './Components/OutsideOfWork';
+import Blog from './Components/Blog';
 import ReactGA from 'react-ga';
 
 const dir = '/Leetcode';
@@ -53,10 +56,14 @@ class App extends Component {
     render() {
         return ( 
             < div >
-                <Header data = { this.state.resumeData.main }/>  
-                {/*<Leetcode filepath = "./146.LRUCache.md"></Leetcode> */}
-                <Calendar2></Calendar2>
-           
+                <Header data = { this.state.resumeData.main }/> 
+                <Calendar2></Calendar2> 
+                <Projects></Projects>
+                <OutsideOfWork></OutsideOfWork>
+                <Blog></Blog>
+                {/*<Leetcode filepath = "./146.LRUCache.md"></Leetcode> 
+                
+           */}
                 
             {/*   
                 <div className="smoothscroll" id = "resume_container">
